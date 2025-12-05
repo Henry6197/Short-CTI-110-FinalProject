@@ -1,0 +1,339 @@
+/* ==================== */
+/* CSS Reset & Variables */
+/* ==================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Primary Colors */
+  --very-dark-magenta: hsl(300, 43%, 22%);
+  --soft-pink: hsl(333, 80%, 67%);
+  
+  /* Neutral Colors */
+  --dark-grayish-magenta: hsl(303, 10%, 53%);
+  --light-grayish-magenta: hsl(300, 24%, 96%);
+  --white: hsl(0, 0%, 100%);
+  
+  /* Typography */
+  --font-family: 'League Spartan', sans-serif;
+  --font-size-base: 15px;
+}
+
+/* ==================== */
+/* Base Styles */
+/* ==================== */
+
+body {
+  font-family: var(--font-family);
+  font-size: var(--font-size-base);
+  background-color: var(--white);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5rem 1.5rem;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Background patterns */
+body::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background-image: url('./images/bg-pattern-top-mobile.svg');
+  background-repeat: no-repeat;
+  background-position: top left;
+  z-index: -1;
+}
+
+body::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 50%;
+  background-image: url('./images/bg-pattern-bottom-mobile.svg');
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  z-index: -1;
+}
+
+/* ==================== */
+/* Layout Container */
+/* ==================== */
+
+.container {
+  max-width: 1110px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* ==================== */
+/* Header Section */
+/* ==================== */
+
+.header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.header-content {
+  margin-bottom: 2.5rem;
+}
+
+.header-content h1 {
+  color: var(--very-dark-magenta);
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 0.8;
+  margin-bottom: 1.5rem;
+  padding: 0 1rem;
+}
+
+.header-content p {
+  color: var(--dark-grayish-magenta);
+  font-size: 1.125rem;
+  font-weight: 500;
+  line-height: 1.5;
+  padding: 0 0.5rem;
+}
+
+/* ==================== */
+/* Ratings Section */
+/* ==================== */
+
+.ratings {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+
+.rating-card {
+  background-color: var(--light-grayish-magenta);
+  border-radius: 8px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.stars {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.stars img {
+  width: 17px;
+  height: 16px;
+}
+
+.rating-text {
+  color: var(--very-dark-magenta);
+  font-weight: 700;
+  font-size: 1.0625rem;
+}
+
+/* ==================== */
+/* Testimonials Section */
+/* ==================== */
+
+.testimonials {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.testimonial-card {
+  background-color: var(--very-dark-magenta);
+  border-radius: 8px;
+  padding: 2.5rem 2rem 2rem;
+  color: var(--white);
+}
+
+.testimonial-header {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.testimonial-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.testimonial-name {
+  font-size: 1.0625rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+
+.testimonial-status {
+  color: var(--soft-pink);
+  font-size: 1.0625rem;
+  font-weight: 400;
+}
+
+.testimonial-quote {
+  font-size: 1.0625rem;
+  font-weight: 500;
+  line-height: 1.4;
+  quotes: none;
+}
+
+/* ==================== */
+/* Attribution Footer */
+/* ==================== */
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin-top: 2rem;
+  color: var(--dark-grayish-magenta);
+}
+
+.attribution a {
+  color: var(--very-dark-magenta);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.attribution a:hover {
+  color: var(--soft-pink);
+}
+
+/* ==================== */
+/* Desktop Styles */
+/* ==================== */
+
+@media screen and (min-width: 768px) {
+  body {
+    padding: 7rem 2rem;
+  }
+  
+  /* Desktop background patterns */
+  body::before {
+    background-image: url('./images/bg-pattern-top-desktop.svg');
+    width: 50%;
+    height: 100%;
+  }
+  
+  body::after {
+    background-image: url('./images/bg-pattern-bottom-desktop.svg');
+    width: 50%;
+    height: 100%;
+  }
+  
+  /* Header Section - Desktop */
+  .header {
+    display: grid;
+    grid-template-columns: 1fr 1.1fr;
+    gap: 2rem;
+    align-items: center;
+    text-align: left;
+    margin-bottom: 4.5rem;
+  }
+  
+  .header-content {
+    margin-bottom: 0;
+  }
+  
+  .header-content h1 {
+    font-size: 3.5rem;
+    padding: 0;
+    margin-bottom: 1.25rem;
+    max-width: 445px;
+  }
+  
+  .header-content p {
+    font-size: 1.1875rem;
+    padding: 0;
+    max-width: 445px;
+  }
+  
+  /* Ratings Section - Desktop */
+  .ratings {
+    justify-content: center;
+    gap: 1rem;
+  }
+  
+  .rating-card {
+    flex-direction: row;
+    justify-content: flex-start;
+    padding: 1.25rem 2rem;
+    max-width: 445px;
+    gap: 2rem;
+  }
+  
+  /* Staggered rating cards */
+  .rating-1 {
+    align-self: flex-start;
+  }
+  
+  .rating-2 {
+    align-self: center;
+    margin-left: 3rem;
+  }
+  
+  .rating-3 {
+    align-self: flex-end;
+    margin-left: 6rem;
+  }
+  
+  /* Testimonials Section - Desktop */
+  .testimonials {
+    flex-direction: row;
+    gap: 1.875rem;
+    align-items: flex-start;
+  }
+  
+  .testimonial-card {
+    flex: 1;
+    min-height: 234px;
+  }
+  
+  /* Staggered testimonial cards */
+  .card-1 {
+    align-self: flex-start;
+  }
+  
+  .card-2 {
+    align-self: center;
+    margin-top: 1rem;
+  }
+  
+  .card-3 {
+    align-self: flex-end;
+    margin-top: 2rem;
+  }
+  
+  .testimonial-quote {
+    font-size: 1.0625rem;
+    line-height: 1.35;
+  }
+}
+
+/* Large Desktop optimization */
+@media screen and (min-width: 1200px) {
+  body {
+    padding: 0 2rem;
+  }
+  
+  .header-content h1 {
+    font-size: 3.75rem;
+  }
+}

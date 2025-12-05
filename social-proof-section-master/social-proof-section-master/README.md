@@ -1,58 +1,89 @@
-# CTI-110 Final Project - Social proof section
+# CTI-110 Final Project - Social proof section solution
 
 ![Design preview for the Social proof section coding challenge](./design/desktop-preview.jpg)
 
-## Welcome! 👋
+## Table of contents
 
-Thanks for checking out this front-end coding challenge.
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+- [Author](#author)
 
-**To do this challenge, you need a basic understanding of HTML and CSS.**
+## Overview
 
-## The challenge
+### The challenge
 
-Your challenge is to build out this social proof section and get it looking as close to the design as possible.
-
-You can use any tools you like to help you complete the challenge. So if you've got something you'd like to practice, feel free to give it a go.
-
-Your users should be able to:
+Users should be able to:
 
 - View the optimal layout for the section depending on their device's screen size
+- See hover states for interactive elements
 
-## Where to find everything
+### Links
 
-Your task is to build out the project to the designs inside the `/design` folder. You will find both a mobile and a desktop version of the design. 
+- Repository URL: [https://github.com/Henry6197/Short-CTI-110-FinalProject](https://github.com/Henry6197/Short-CTI-110-FinalProject)
+- Live Site URL: [Add live site URL here after GitHub Pages deployment]
 
-The designs are in JPG static format. Using JPGs will mean that you'll need to use your best judgment for styles such as `font-size`, `padding` and `margin`. 
+## My process
 
-You will find all the required assets in the `/images` folder. The assets are already optimized.
+### Built with
 
-There is also a `style-guide.md` file containing the information you'll need, such as color palette and fonts.
+- Semantic HTML5 markup
+- CSS custom properties (CSS variables)
+- Flexbox
+- CSS Grid
+- Mobile-first workflow
+- Google Fonts (League Spartan)
 
-## Building your project
+### What I learned
 
-Feel free to use any workflow that you feel comfortable with. Below is a suggested process, but do not feel like you need to follow these steps:
+This project helped me practice:
 
-1. Initialize your project as a public repository on [GitHub](https://github.com/). Creating a repo will make it easier to share your code with the community if you need help. If you're not sure how to do this, [have a read-through of this Try Git resource](https://try.github.io/).
-2. Configure your repository to publish your code to a web address. This will also be useful if you need some help during a challenge as you can share the URL for your project with your repo URL. There are a number of ways to do this, and we provide some recommendations below.
-3. Look through the designs to start planning out how you'll tackle the project. This step is crucial to help you think ahead for CSS classes to create reusable styles.
-4. Before adding any styles, structure your content with HTML. Writing your HTML first can help focus your attention on creating well-structured content.
-5. Write out the base styles for your project, including general content styles, such as `font-family` and `font-size`.
-6. Start adding styles to the top of the page and work down. Only move on to the next section once you're happy you've completed the area you're working on.
+1. **Responsive Design**: Creating layouts that work seamlessly across mobile (375px) and desktop (1440px) breakpoints
+2. **CSS Grid**: Used for the header section to create a two-column layout on desktop
+3. **Flexbox**: Applied for ratings cards, testimonials, and internal card layouts
+4. **CSS Custom Properties**: Organized colors and typography as reusable variables
+5. **Staggered Layouts**: Created visually interesting offset patterns for rating cards and testimonials
+6. **Semantic HTML**: Used appropriate elements like `<main>`, `<section>`, `<article>`, and `<blockquote>`
+7. **Accessibility**: Added proper alt text, ARIA attributes, and semantic markup
 
-## Deploying your project
+Key CSS techniques used:
 
-Deploy your site as a live site through GitHub Pages.
+```css
+/* CSS Variables for maintainability */
+:root {
+  --very-dark-magenta: hsl(300, 43%, 22%);
+  --soft-pink: hsl(333, 80%, 67%);
+}
 
-## Create a custom `README.md`
+/* Staggered card layout */
+.rating-2 {
+  margin-left: 3rem;
+}
 
-You must overwrite this `README.md` with a custom one. We've provided a template inside the [`README-template.md`](./README-template.md) file in this starter code.
+/* Background patterns with pseudo-elements */
+body::before {
+  content: '';
+  position: absolute;
+  background-image: url('./images/bg-pattern-top-desktop.svg');
+}
+```
 
-The template provides a guide for what to add. A custom `README` will help you explain your project and reflect on your learnings. Please feel free to edit our template as much as you like.
+### Continued development
 
-Once you've added your information to the template, delete this file and rename the `README-template.md` file to `README.md`. That will make it show up as your repository's README file.
+Future improvements could include:
+- Adding subtle animations on scroll or hover
+- Implementing a dark mode toggle
+- Enhancing accessibility features with keyboard navigation
+- Optimizing performance with lazy loading for images
 
-## Submitting your solution
+## Author
 
-Submit your repo link and live site link on Blackboard for grading.
+- GitHub - [@Henry6197](https://github.com/Henry6197)
+- Project - CTI-110 Final Project
 
-**Have fun building!** 🚀
+## Acknowledgments
+
+Thanks to Wake Tech Community College and the CTI-110 course for providing this practical web development challenge.
