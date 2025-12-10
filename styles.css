@@ -52,7 +52,13 @@ body::before {
   background-image: url('./images/bg-pattern-top-mobile.svg');
   background-repeat: no-repeat;
   background-position: top left;
-  z-index: -1;
+  background-size: contain;
+  z-index: 0;
+}
+
+.container {
+  position: relative;
+  z-index: 1;
 }
 
 body::after {
@@ -65,7 +71,8 @@ body::after {
   background-image: url('./images/bg-pattern-bottom-mobile.svg');
   background-repeat: no-repeat;
   background-position: bottom right;
-  z-index: -1;
+  background-size: contain;
+  z-index: 0;
 }
 
 /* ==================== */
@@ -73,6 +80,8 @@ body::after {
 /* ==================== */
 
 .container {
+  position: relative;
+  z-index: 1;
   max-width: 1110px;
   width: 100%;
   margin: 0 auto;
@@ -225,19 +234,6 @@ body::after {
     padding: 7rem 2rem;
   }
   
-  /* Desktop background patterns */
-  body::before {
-    background-image: url('./images/bg-pattern-top-desktop.svg');
-    width: 50%;
-    height: 100%;
-  }
-  
-  body::after {
-    background-image: url('./images/bg-pattern-bottom-desktop.svg');
-    width: 50%;
-    height: 100%;
-  }
-  
   /* Header Section - Desktop */
   .header {
     display: grid;
@@ -329,11 +325,3 @@ body::after {
 
 /* Large Desktop optimization */
 @media screen and (min-width: 1200px) {
-  body {
-    padding: 0 2rem;
-  }
-  
-  .header-content h1 {
-    font-size: 3.75rem;
-  }
-}
